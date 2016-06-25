@@ -1,0 +1,24 @@
+# odoo-data-only
+odoodataonly:
+  build: ./odoo-data-only
+  command: tailf /dev/null
+
+# odoo-run
+odoorun:
+  build: ./odoo-run
+  environment:
+   SERVER_TIMEZONE: Asia/Ho_Chi_Minh
+   INIT_MODULES: point_of_sale,purchase
+   WITHOUT_DEMO: all
+   LOAD_LANGUAGES: vi_VN
+   ORG_PG_DB_HOST: 172.17.42.1
+   ORG_PG_DB_PORT: 5432
+   ORG_PG_DB_NAME: app
+   ORG_PG_DB_USER: app1
+   ORG_PG_DB_PASSWORD: app1
+   ORG_NAME: app
+   ORG_ADMIN_PASS: app1
+  ports:
+   - "8069:8069"
+   - "8071:8071"
+  restart: always
