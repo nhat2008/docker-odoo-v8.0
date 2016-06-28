@@ -3,6 +3,11 @@ odoodataonly:
   build: ./odoo-data-only
   command: tailf /dev/null
 
+# odoo-base
+odoobase:
+  build: ./odoo-base
+  image: odoo_base:8.0
+
 # odoo-run
 odoorun:
   build: ./odoo-run

@@ -1,4 +1,3 @@
-#image: odoo_unmodified:8.0
 FROM odoo_base:8.0
 
 MAINTAINER Nhat Nguyen <nminhnhat2008@gmail.com>
